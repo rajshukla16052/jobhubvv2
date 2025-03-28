@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/api/job", jobRouter);
+app.use("/api/jobs", jobRouter);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.listen(process.env.PORT || port, () =>

@@ -2,6 +2,7 @@ const Job = require("../models/Job");
 module.exports = {
   createJob: async (req, res) => {
     const newJob = new Job(req.body);
+    console.log(newJob);
     try {
       await newJob.save();
       res
